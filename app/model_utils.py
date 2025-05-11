@@ -49,7 +49,7 @@ def train_and_save_model():
     # Предсказание и отчёт
     logger.info("Prediction based on a test sample and generation of a classification report")
     y_pred = _model.predict(X_test)
-    report = classification_report(y_test, y_pred, digits=4)
+    report = classification_report(y_test, y_pred, digits=4, output_dict=True)
     logger.info("\n%s", report)
 
     # Сохранение модели
